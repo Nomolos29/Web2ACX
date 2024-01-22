@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --color-primary: rgb(174, 212, 255);
+    --color-secondary: #a0a0a0;
+    --color-natural: #fff;
+    --color-border: #c2c2c2;
+    --background-blur: #292929d8;
+    --box-shadow: #d2d2d25d;
+
+    /* fonts */
+    --font-light: 400;
+    --font-medium: 500;
+    --font-semi-large: 600;
+    --font-large: 700;
+
+    --font-s-small: 16px;
+    --font-s-normal: 20px;
+    --font-s-medium: 26px;
+    --font-s-large: 40px;
+
+    /* Border Radius */
+    --radius-1: 5px;
+    --radius-2: 10px;
+    /* Border Width */
+    --border-width-1: 1px;
+}
+h1,
+h2,
+h4 {
+    color: var(--color-natural);
+}
+
+/*
+------------------------------------
+========= REUSEABLE STYLING ========
+------------------------------------
+*/
+.flex {
+    display: flex;
+}
+.j-center {
+    justify-content: center;
+}
+.a-center {
+    align-items: center;
+}
+
+/* 
+------------------------------------
+========== MAIN BACKGROUND =========
+------------------------------------
+*/
+body {
+    height: 100vh;
+    width: 100vw;
+    padding: 50px;
+    background: linear-gradient(120deg, #000000c5 45%, #414141), url('../Images/malcolm-lightbody-l26lodlKh2w-unsplash.jpg') center/cover no-repeat;
+    background-blend-mode: hard-light;
+}
+.main-container {
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* 
+------------------------------------
+============= NAV BAR ==============
+------------------------------------
+*/
+
+.nav-container {
+    height: 50px;
+    width: 85%;
+    justify-content: space-between;
+}
+
+.nav-container h2 {
+    padding-right: 40px;
+}
+
+.nav-container a{
+    color: var(--color-secondary);
+    font-size: var(--font-s-normal);
+    font-weight: var(--font-medium);
+    padding: 12px 20px;
+    border-radius: var(--radius-1);
+}
+/* ----- Hover Effect ------ */
+.nav-container a:hover {
+    background-color: var(--box-shadow);
+    border: var(--border-width-1) solid var(--color-natural);
+}
