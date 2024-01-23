@@ -39,9 +39,11 @@ h4 {
 }
 
 i {
-    height: 100px;
+    font-size: 30px;
     color: var(--color-natural);
-    /* border: 1px solid red; */
+}
+a {
+    color: var(--color-border);
 }
 /*
 ------------------------------------
@@ -64,23 +66,28 @@ i {
     padding: 10px 22px;
     background-color: red;
     border-radius: 50%;
+    margin-right: 5px;
 }
 .small-circle {
     font-size: 40px;
     color: var(--color-success);
+}
+.seat {
+    color: var(--color-secondary);
 }
 .box {
     color: var(--color-natural);
     background-color: var(--box-shadow);
     border: var(--border-width-1) solid var(--color-natural);
     border-radius: var(--radius-1);
-    padding: 5px 10px;
+    padding: 10px 10px;
 }
 .btn {
     padding: 10px 20px;
     border-radius: var(--radius-2);
     width: 45%;
 }
+
 .btn:hover {
     cursor: pointer;
 }
@@ -93,7 +100,7 @@ body {
     height: 100vh;
     width: 100vw;
     justify-content: space-between;
-    padding: 50px;
+    padding: 30px 50px;
     background: linear-gradient(120deg, #000000c5 45%, #414141), url('../Images/malcolm-lightbody-l26lodlKh2w-unsplash.jpg') center/cover no-repeat;
     background-blend-mode: hard-light;
 }
@@ -124,6 +131,7 @@ body {
     font-weight: var(--font-medium);
     padding: 12px 20px;
     border-radius: var(--radius-1);
+    margin-right: 20px;
 }
 /* ----- Hover Effect ------ */
 .nav-container a:hover {
@@ -138,8 +146,20 @@ body {
 */
 
 .main-interface-container {
-    width: 95%;
+    width: 96%;
     row-gap: 50px;
+}
+/* -------- INTERFACE TEXTS ------- */
+.interface-texts h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+.interface-texts h1 {
+    font-size: 46px;
+    color: var(--color-natural);
+    margin-bottom: 10px;
 }
 .main-interface {
     width: 85%;
@@ -150,7 +170,14 @@ body {
     justify-content: space-between;
 }
 .no-display {
+    justify-content: space-between;
     width: 47%;
+}
+.no-display p {
+    font-size: 12px;
+}
+.no-display h3 {
+    font-size: 28px;
 }
 
 .second-section {
@@ -165,6 +192,16 @@ body {
 }
 .btn-2 {
     background-color: var(--color-success);
+}
+
+/* 
+------------------------------------
+============== FOOTER ==============
+------------------------------------
+*/
+footer {
+    width: 95%;
+    justify-content: space-between;
 }
 
 /* 
