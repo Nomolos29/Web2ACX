@@ -8,13 +8,12 @@
     <script src="/passengerCounterApp/app.js"></script>
     <title>Transeat | Passenger Counter App</title>
 </head>
-<body>
-    <div class="main-container flex">
+<body class="flex">
+    <div class="main-container flex column">
         <nav>
             <div class="nav-container flex a-center">
                 <div class="logo flex">
-                    <img src="" alt="">
-                    <h2>Transeat</h2>
+                    <h1><span class="large-circle"></span>Transeat<span class="small-circle">.</span></h1>
                 </div>
                 <a id="home" href="#">Home</a>
                 <a id="home" href="#">Join d Bus</a>
@@ -22,16 +21,87 @@
         </nav>
 
         <section>
-            <div class="main-interface-container">
+            <div class="main-interface-container flex column">
                 <div class="interface-texts">
                     <h4>Resgister for free</h4>
                     <h1>Have a save Journey</h1>
                 </div>
-                <div class="main-interface">
-                    
+
+                <div class="main-interface flex column">
+                    <div class="first-section flex">
+                        <div class="no-display flex box">
+                            <div>
+                                <p>Onboarded Passengers</p>
+                                <h3 id="on-seat">35persons</h3>
+                            </div>
+                            <div>
+                                <i class="uil uil-bus-alt"></i>
+                            </div>
+                        </div>
+
+                        <div class="no-display flex box">
+                            <div>
+                                <p>Onboarded Passengers</p>
+                                <h3 id="on-seat">35persons</h3>
+                            </div>
+                            <div>
+                                <i class="uil uil-bus-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="second-section">
+                        <div class="slide-display box flex">
+                            <div>
+                                <i class="uil uil-bus-alt"></i>
+                            </div>
+
+                            <marquee behavior="" direction="left">
+                                <p>Onboarded Passengers</p>
+                            </marquee>
+                        </div>
+                    </div>
+
+
+                    <div class="first-section flex">
+                        <div class="btn-1 flex btn">
+                            <div>
+                                <h3 id="on-seat">35persons</h3>
+                            </div>
+                        </div>
+
+                        <div class="btn-2 flex btn">
+                            <div>
+                                <h3 id="on-seat">Join D Bus</h3>
+                            </div>
+                            <div>
+                                <i class="uil uil-bus-alt"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+
+        <footer>
+            <div class="git">
+                <i class="uil uil-github"></i>
+            </div>
+            <div class="copy-right"></div>
+        </footer>
     </div>
+
+    <!-- <form action="">
+        <div class="form-container">
+            <div class="form-text">
+                <p>NGN</p>
+                <h1>0.00</h1>
+            </div>
+
+
+        </div>
+    </form> -->
 </body>
 </html> 
