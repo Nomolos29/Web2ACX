@@ -30,7 +30,6 @@ joinDBus.addEventListener("click", () =>{
     if(person<50){
         person++;
     }else{
-        // vacantSeat.style.backgroundColor = "red";
         joinDBus.style.backgroundColor = "red";
         success.style.backgroundColor = "green";
         warning.style.backgroundColor = "red";
