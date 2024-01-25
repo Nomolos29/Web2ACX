@@ -14,7 +14,7 @@ const quotes = ["Adventure is worthwhile in itself. - Amelia Earhart", "Travel m
 
 // alert(quotes[quote]);
 function randomOutPut(){
-    person = Math.round(Math.random()*40);
+    person = Math.round(Math.random()*45);
     onSeat.innerHTML= person+"persons";
     vacantSeat.innerHTML = (50-person)+"Seats";
 }
