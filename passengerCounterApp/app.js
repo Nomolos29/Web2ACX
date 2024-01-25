@@ -4,6 +4,8 @@ const anotherBus = document.getElementById('btn-1');
 const joinDBus = document.getElementById('btn-2');
 const vacantSeat = document.getElementById('vacant-seat');
 const slide = document.getElementById('slide');
+const success = document.getElementById('success');
+const warning = document.getElementById('warning');
 let person;
 let quote;
 
@@ -27,6 +29,11 @@ anotherBus.addEventListener("click", randomOutPut);
 joinDBus.addEventListener("click", () =>{
     if(person<50){
         person++;
+    }else{
+        // vacantSeat.style.backgroundColor = "red";
+        joinDBus.style.backgroundColor = "red";
+        success.style.backgroundColor = "green";
+        warning.style.backgroundColor = "red";
     }
     onSeat.innerHTML= person+"persons";
     vacantSeat.innerHTML = (50-person)+"Seats";
