@@ -166,7 +166,7 @@ header {
     align-items: center;
 }
 .hero-header-container {
-    background: url("/KiddieCash/images/bg-intro-desktop.svg") ;
+    background: url("./images/bg-intro-desktop.svg") ;
     background-position: top right;
     background-repeat: no-repeat;
     background-size: contain;
