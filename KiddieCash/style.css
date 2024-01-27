@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: 'Public Sans';
 }
 
 /* 
@@ -40,6 +41,11 @@
     /* ## Body Copy ## */
 
     --Font-size: 18px;
+
+    /* ## Weight ## */
+    --light: 300;
+    --normal: 400;
+    --bold: 700;
 }
 
 /* 
@@ -65,6 +71,69 @@
     --White: hsl(0, 0%, 100%);
 }
 
-body {
-    background-color: red;
+.main-container {
+    max-width: var(--Desktop);
 }
+/*
+------------------------------------------------
+============== UTILITY/REUSEABLES ==============
+------------------------------------------------
+*/
+.flex {
+    display: flex;
+}
+.btn {
+    padding: 12px 35px;
+    color: var(--White);
+    font-weight: var(--normal);
+    background: linear-gradient(45deg, var(--Lime-Green), var(--Bright-Cyan));
+    border-radius: 40px;
+}
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all ease-in-out 0.3s;
+}
+/*
+------------------------------------------
+================== HEADER ================
+------------------------------------------
+*/
+
+header {
+    background: var(--White);
+    justify-content: center;
+    align-items: center;
+}
+.header-container {
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+}
+.nav-container {
+    justify-content: space-between;
+    width: 30%;
+}
+.nav-container a {
+    padding: 30px 2px;
+    font-weight: var(--normal);
+    border-bottom: 3px solid var(--White);
+    color: var(--Grayish-Blue);
+}
+.nav-container a:hover {
+    border-bottom: 3px solid var(--Lime-Green);
+    color: var(--Dark-Blue);
+}
+
+/*
+-----------------------------------------
+============== HERO HEADER ==============
+-----------------------------------------
+*/
+/* 
+.hero-container {
+    background: var(--Grayish-Blue);
+}
+.hero-header-container {
+    width: ;
+} */
