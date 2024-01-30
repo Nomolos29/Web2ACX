@@ -26,6 +26,7 @@
     /* ## Primary ## */
 
     --Dark-Blue: hsl(233, 26%, 24%);
+    --Dark-Blue-2: hsl(233, 26%, 24%);
     --Lime-Green: hsl(136, 65%, 51%);
     --Bright-Cyan: hsl(192, 70%, 51%);
 
@@ -35,12 +36,13 @@
     --Light-Grayish-Blue: hsl(220, 16%, 96%);
     --Very-Light-Gray: hsl(0, 0%, 98%);
     --White: hsl(0, 0%, 100%);
-
+    --footer-white-link: hsl(0, 0%, 98%);
+    
     /* ***## Typography ##*** */
 
     /* ## Heading copy ## */
 
-
+    
     /* ## Body Copy ## */
 
     --Font-size: 18px;
@@ -62,15 +64,17 @@
     /* ## Primary ## */
 
     --Dark-Blue: hsl(0, 0%, 88%);
+    --Dark-Blue-2: hsl(233, 100%, 5%);
     --Lime-Green: hsl(136, 65%, 51%);
     --Bright-Cyan: hsl(192, 70%, 51%);
-
+    
     /* ***## Neutral ##*** */
-
+    
     --Grayish-Blue: hsl(233, 8%, 62%);
     --Light-Grayish-Blue: hsl(224, 89%, 7%);
     --Very-Light-Gray: hsl(230, 94%, 6%);
     --White: hsl(233, 100%, 5%);
+    --footer-white-link: hsl(233, 8%, 62%);
 }
 h1,
 h2 {
@@ -89,9 +93,9 @@ p {
     color: var(--Grayish-Blue);
     font-size: var(--Font-size);
 }
-.main-container {
+/* .main-container {
     max-width: var(--Desktop);
-}
+} */
 /*
 ------------------------------------------------
 ============== UTILITY/REUSEABLES ==============
@@ -108,6 +112,7 @@ p {
     padding: 10px 13px;
     background: linear-gradient(45deg, var(--Lime-Green), var(--Bright-Cyan));
     border-radius: 50px;
+    background-blend-mode: overlay;
     color: var(--White);
     text-align: center;
     font-weight: var(--normal);
@@ -119,7 +124,7 @@ p {
 .btn:hover,
 .icon:hover {
     cursor: pointer;
-    opacity: 0.7;
+    background: linear-gradient(45deg, var(--Lime-Green), var(--Bright-Cyan)), rgba(255, 255, 255, 0.301);
     transition: all ease-in-out 0.2s;
 }
 /*
@@ -152,7 +157,15 @@ header {
     border-bottom: 3px solid var(--Lime-Green);
     color: var(--Dark-Blue);
 }
-
+.buttons {
+    width: 22%;
+    justify-content: space-between;
+}
+.dark {
+    width: 20%;
+    justify-content: flex-end;
+    align-items: center;
+}
 /*
 -----------------------------------------
 ============== HERO HEADER ==============
@@ -166,34 +179,37 @@ header {
     align-items: center;
 }
 .hero-header-container {
-    background: url("./images/bg-intro-desktop.svg") ;
-    background-position: top right;
-    background-repeat: no-repeat;
-    background-size: contain;
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     margin-left: 14%;
     align-items: center;
-    /* overflow: hidden; */
+    background: url("./images/bg-intro-desktop.svg");
+    background-position-y: 80%;
+    background-position-x: 130%;
+    background-repeat: no-repeat;
+    background-size: 70%;
 }
 .hero-content {
     flex-direction: column;
-    justify-content: space-between;
-    height: 55%;
+    justify-content: center;
+    height: 100%;
     width: 36%;
-    margin-bottom: 150px;
-    margin-top: 12%;
+    row-gap: 40px;
 }
 
 .hero-image {
-    width: 70%;
-    z-index: 1;
+    position: relative;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+
 }
 .hero-image img {
-    position: relative;
-    bottom: -2.5rem;
-    right: -13rem;
-    z-index: 10;
+    width: 90%;
+    position: absolute;
+    top: -21%;
+    right: -13%;
+    z-index: 2;
 }
 
 /*
@@ -209,6 +225,7 @@ header {
     width: 100%;
     background: var(--Light-Grayish-Blue);
     padding: 20px 0px;
+    z-index: -1;
 }
 .why-choose-container {
     flex-direction: column;
@@ -268,4 +285,55 @@ header {
 }
 .article-box .content p:last-of-type {
     font-size: 14px;
+}
+
+/*
+--------------------------------
+============ FOOTER ============
+--------------------------------
+*/
+
+.footer {
+    width: 100vw;
+    height: 180px;
+    background: var(--Dark-Blue-2);
+    padding: 40px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container {
+    width: 85%;
+    height: 100%;
+    justify-content: space-between;
+}
+.left{
+    width: 50%;
+    justify-content: space-between;
+}
+.socials {
+    width: 26%;
+    height: 100%;
+    justify-content: space-between;
+}
+.social-links {
+    justify-content: space-between;
+}
+.social-links svg path:hover {
+    fill: var(--Bright-Cyan);
+}
+.quick-links {
+    height: 90%;
+    justify-content: space-between;
+}
+.quick-links a:hover {
+    color: var(--Bright-Cyan);
+}
+.right {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.quick-links a,
+.right p {
+    font-size: 14px;
+    color: var(--footer-white-link);
 }
