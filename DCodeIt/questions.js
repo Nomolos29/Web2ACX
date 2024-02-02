@@ -90,6 +90,12 @@ let questions = [
     answer: "<ul>",
     options: [escapeHTML("<list>"), escapeHTML("<ol>"), escapeHTML("<ul>"), escapeHTML("<li>")]
     },
+    {
+    numb: 11,
+    question: "You need to create a form for users to submit their contact information. Which HTML element would you use to collect the user's email address?",
+    answer: "<input type='email'>",
+    options: [escapeHTML("<input type='text'>"), escapeHTML("<input type='email'>"), escapeHTML("<input type='password'>"), escapeHTML("<input type='checkbox'>")]
+    },
     
 ];
 
