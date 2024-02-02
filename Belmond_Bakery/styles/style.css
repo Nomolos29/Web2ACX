@@ -1,1 +1,40 @@
-ECHO is on.
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: 0;
+    list-style: none;
+}
+
+/* 
+-----------------------------
+========= VARIABLES =========
+-----------------------------
+*/
+:root {
+    /* **## Colors ##** */
+    --btn-links: #E97911;
+    --secondary: #fff;
+    --primary: #000;
+    --shadows: #00000015;
+    --notification: #FF0000;
+
+    /* **## Font Weights ##** */
+    --regular: 400;
+    --semi-bold: 600;
+    --bold: 700;
+
+    /* **## Font Size ##** */
+    --text-1: 20px;
+    --text-2: 24px;
+    --text-3: 18px;
+    --heading-1: 80px;
+    --heading-2: 70px;
+    --heading-3: 50px;
+    --heading-4: 40px;
+    --heading-5: 32px;
+    --heading-6: 30px;
+}
+
