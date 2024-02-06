@@ -2,6 +2,8 @@
 
 
 const container = document.querySelector(".products-container");
+const productSingle = document.querySelectorAll('.product-name');
+const singleProductPage = "./single_product.html";
 
 
 
@@ -12,17 +14,18 @@ function createProductCard(image, title, price, stDescription, lgDescription) {
     // const contentDiv = document.createElement("div");
     // contentDiv.classList.add("product-content");
     productImage = document.createElement("img");
-    const h2 = document.createElement("h2");
+    const productName = document.createElement("a");
     const h3 = document.createElement("h3");
     const button = document.createElement("button");
 
     productImage.classList.add("productImage");
-    h2.classList.add("product-name");
+    productName.classList.add("product-name");
     h3.classList.add("product-price");
     button.classList.add("product-btn");
     
     productImage.src = image;
-    h2.innerText = title;
+    productName.innerText = title;
+    productName.href = "./single_product.html";
     h3.textContent = price;
     button.textContent = "Add To Cart";
 
@@ -30,36 +33,79 @@ function createProductCard(image, title, price, stDescription, lgDescription) {
     
     container.appendChild(div);
     div.appendChild(productImage);
-    div.appendChild(h2);
+    div.appendChild(productName);
     div.appendChild(h3);
     div.appendChild(button);
-z};
+};
 
 
 // Loop through each category of products
 products.forEach(category => {
     // Loop through each type of cake in the category
-    Object.keys(category).forEach(cakeType => {
+    Object.keys(category).forEach(subCategories => {
         // Get the array of cakes of the current type
-        const cakes = category[cakeType];
-        Object.keys(cakes).forEach(cakeType =>
-        // Loop through each cake
-        cakes.forEach(cake => {
-            // Access the cake object within the cakeType object
-            const cakeDetails = cake[Object.keys(cake)[0]]; // Get the first (and only) object within the cake
-            if (cakeDetails) {
-                // Render the product details to your HTML file
-                createProductCard(
-                    cakeDetails.image, 
-                    cakeDetails.productName, cakeDetails.price,
-                    cakeDetails.shortDescription,
-                    cakeDetails.longDescription
-                    );
-                console.log("Size:", cakeDetails.size);
-                console.log("Flavour:", cakeDetails.flavour);
-                // You can render these details to your HTML file as needed
-            }
+        const productTypes = category[subCategories];
+        Object.keys(productTypes).forEach(productType => {
+
+            const productItems = productTypes[productType]; 
+            Object.keys(productItems).forEach(productItem => {
+                
+                const items = productItems[productItem];
+                items.forEach(item => {
+                    // Access the cake object within the cakeType object
+                     // Get the first (and only) object within the cake
+                    console.log(item.productName);
+                    if (item) {
+                        
+                        // Render the product details to your HTML file
+                        createProductCard(
+                            item.image, 
+                            item.productName, 
+                            item.price,
+                            item.shortDescription,
+                            item.longDescription
+                        );
+                        // console.log("Size:", cakeDetails.size);
+                        // console.log("Flavour:", cakeDetails.flavour);
+                        // You can render these details to your HTML file as needed
+                    
+                    };
+                });
+            });
         });
+
     });
 });
 
+productSingle.forEach(product => {
+    product.onclick = () => {
+    window.location.href = singleProductPage;
+};
+});
+// // THIS FETCHES HEADER WHEN IT IS IN A SEPARATE FILE.
+// function includeHeader() {
+//     fetch('shop.html')
+//         .then(response => response.text())
+//         .then(shopHtml => {
+//             document.getElementById('header').innerHTML = shopHtml;
+//         });
+// }
+
+// // Call the function to include header
+// includeHeader();
+
+// Function to include header
+function includeHeader() {
+    // Get the header content from the home page
+    var headerContent = document.querySelector('header').innerHTML;
+    
+    // Insert the header content into the header container of each page
+    var headerContainers = document.querySelectorAll('.global-header');
+    headerContainers.forEach(function(container) {
+        container.innerHTML = headerContent;
+    });
+    // alert('working');
+}
+
+// Call the function to include header
+includeHeader();
