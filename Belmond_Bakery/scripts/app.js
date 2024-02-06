@@ -5,36 +5,47 @@ const container = document.querySelector(".products-container");
 const productSingle = document.querySelectorAll('.product-name');
 const singleProductPage = "./single_product.html";
 
-
+let notificationCount = 0;
 
 
 function createProductCard(image, title, price, stDescription, lgDescription) {
     const div = document.createElement("div");
     div.classList.add("product-card");
+    const cart = document.querySelector('.cart-notification');
     // const contentDiv = document.createElement("div");
-    // contentDiv.classList.add("product-content");
+
+
     productImage = document.createElement("img");
     const productName = document.createElement("a");
-    const h3 = document.createElement("h3");
+    const p = document.createElement("p");
     const button = document.createElement("button");
 
     productImage.classList.add("productImage");
     productName.classList.add("product-name");
-    h3.classList.add("product-price");
+    p.classList.add("product-price");
     button.classList.add("product-btn");
     
     productImage.src = image;
     productName.innerText = title;
     productName.href = "./single_product.html";
-    h3.textContent = price;
+    p.textContent = price;
     button.textContent = "Add To Cart";
-
+    button.onclick = () => {
+        if(!button.classList.contains("clicked")){
+            notificationCount++;
+            button.textContent = "View Cart";
+            cart.innerText = notificationCount;
+            button.classList.add("clicked");
+        }else if(button.classList.contains("clicked")){
+            window.location.href = "./cart.html";
+        }
+    };
 
     
     container.appendChild(div);
     div.appendChild(productImage);
     div.appendChild(productName);
-    div.appendChild(h3);
+    div.appendChild(p);
     div.appendChild(button);
 };
 
@@ -100,10 +111,10 @@ function includeHeader() {
     var headerContent = document.querySelector('header').innerHTML;
     
     // Insert the header content into the header container of each page
-    var headerContainers = document.querySelectorAll('.global-header');
-    headerContainers.forEach(function(container) {
-        container.innerHTML = headerContent;
-    });
+    var headerContainers = document.querySelector('.global-header');
+    headerContainers.innerHTML = headerContent;  
+    //     container.innerHTML = headerContent;
+    // });
     // alert('working');
 }
 

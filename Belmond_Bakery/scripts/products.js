@@ -18,7 +18,7 @@ const products = [
                     },
                     {
                         productName: "Baby Boss Birthday Cake",
-                        image: "../Images/Belmond Bakery/Rectangle 124-1.png",
+                        image: "../Images/Belmond Bakery/Rectangle 124-3.png",
                         size: ["Small", "Medium", "Big"],
                         flavour: ["Vanilla", "Chocolate", "Red Velvet"],
                         price: 10000,
@@ -34,8 +34,8 @@ const products = [
             {
                 Wedding_Cakes: [
                     {
-                        productName: "3 Steps Gigantic Birthday Cake",
-                        image: "../Images/Belmond Bakery/Rectangle 124-1.png",
+                        productName: "TikTok Birthday Cake",
+                        image: "../Images/Belmond Bakery/Rectangle 124-5.png",
                         size: ["Small", "Medium", "Big"],
                         flavour: ["Vanilla", "Chocolate", "Red Velvet"],
                         price: 10000,
@@ -81,8 +81,8 @@ const products = [
             {
                 Fondants: [
                     {
-                        productName: "3 Steps Gigantic Birthday Cake",
-                        image: "",
+                        productName: "Metal Belted Birthday Cake",
+                        image: "../Images/Belmond Bakery/Rectangle 124-6.png",
                         size: ["Small", "Medium", "Big"],
                         flavour: ["Vanilla", "Chocolate", "Red Velvet"],
                         price: 10000,

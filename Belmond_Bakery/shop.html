@@ -16,20 +16,23 @@
     <header>
         <div id="header" class="header flex">
             <div class="header-container flex">
-                <img src="../Images/Belmond Bakery/belmond cakes logo 1.png" alt="logo" class="logo">
+                <div class="logo">
+                    <img src="../Images/Belmond Bakery/belmond cakes logo 1.png" alt="logo">
+                </div>
                 <nav class="flex">
                     <a href="./index.html" class="nav-link">Home</a>
                     <a href="#" class="nav-link">About Us</a>
-                    <a href="./shop.html" class="nav-link">Shop</a>
+                    <a href="./shop.html" class="nav-link active">Shop</a>
                     <a href="#" class="nav-link">Blog</a>
                     <a href="#" class="nav-link">Career</a>
                     <a href="#" class="nav-link">Contact Us</a>
                 </nav>
                 <div class="cart-section flex">
                     <a href="#" class="nav-link">My Account</a>
-                    <div class="cart-icon">
+                    <a href="./cart.html" class="cart-icon flex">
                         <i class="uil uil-shopping-cart"></i>
-                    </div>
+                        <div class="cart-notification">0</div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -67,14 +70,7 @@
                 </div>
                 <div class="shop-products">
                     <div class="products-container flex">
-                        <!-- <div class="product-card">
-                            <img class="productImage" alt="">
-                            <div class="product-content">
-                                <h2 class="product-name">TikTok Birthday Cake</h2>
-                                <h3 class="product-price">10000</h3>
-                                <button class="product-btn">Add To Cart</button>
-                            </div>
-                        </div> -->
+                        <!-- Products are rendered using JavaScript -->
                     </div>
                     <div class="product-viewer">
                         <button class="product-btn-2">1</button>
