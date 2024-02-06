@@ -61,6 +61,7 @@ products.forEach(category => {
     // Loop through each type of cake in the category
     Object.keys(category).forEach(subCategories => {
         // Get the array of cakes of the current type
+        console.log(Object.keys(category));
         const productTypes = category[subCategories];
         Object.keys(productTypes).forEach(productType => {
 
@@ -71,7 +72,6 @@ products.forEach(category => {
                 items.forEach(item => {
                     // Access the cake object within the cakeType object
                      // Get the first (and only) object within the cake
-                    console.log(item.productName);
                     if (item) {
                         
                         // Render the product details to your HTML file
