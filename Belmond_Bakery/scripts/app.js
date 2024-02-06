@@ -5,6 +5,7 @@ const container = document.querySelector(".products-container");
 const productSingle = document.querySelectorAll('.product-name');
 const singleProductPage = "./single_product.html";
 
+
 let notificationCount = 0;
 
 
@@ -28,18 +29,23 @@ function createProductCard(image, title, price, stDescription, lgDescription) {
     productImage.src = image;
     productName.innerText = title;
     productName.href = "./single_product.html";
-    p.textContent = price;
+    p.textContent = "₦" + price;
     button.textContent = "Add To Cart";
+
+    
+
     button.onclick = () => {
         if(!button.classList.contains("clicked")){
             notificationCount++;
             button.textContent = "View Cart";
+            document.querySelector('.product-btn').innerHTML = "View Cart";
             cart.innerText = notificationCount;
             button.classList.add("clicked");
         }else if(button.classList.contains("clicked")){
             window.location.href = "./cart.html";
         }
     };
+
 
     
     container.appendChild(div);
@@ -93,6 +99,19 @@ productSingle.forEach(product => {
     window.location.href = singleProductPage;
 };
 });
+function addToCart(button){
+    button.onclick = () => {
+        if(!button.classList.contains("clicked")){
+            notificationCount++;
+            button.textContent = "View Cart";
+            cart.innerText = notificationCount;
+            productButton.classList.add("clicked");
+        }else if(button.classList.contains("clicked")){
+            window.location.href = "./cart.html";
+        };
+    };
+};
+
 // // THIS FETCHES HEADER WHEN IT IS IN A SEPARATE FILE.
 // function includeHeader() {
 //     fetch('shop.html')
@@ -106,17 +125,17 @@ productSingle.forEach(product => {
 // includeHeader();
 
 // Function to include header
-function includeHeader() {
-    // Get the header content from the home page
-    var headerContent = document.querySelector('header').innerHTML;
+// function includeHeader() {
+//     // Get the header content from the home page
+//     var headerContent = document.querySelector('header').innerHTML;
     
-    // Insert the header content into the header container of each page
-    var headerContainers = document.querySelector('.global-header');
-    headerContainers.innerHTML = headerContent;  
-    //     container.innerHTML = headerContent;
-    // });
-    // alert('working');
-}
+//     // Insert the header content into the header container of each page
+//     var headerContainers = document.querySelector('.global-header');
+//     headerContainers.innerHTML = headerContent;  
+//     //     container.innerHTML = headerContent;
+//     // });
+//     // alert('working');
+// }
 
-// Call the function to include header
-includeHeader();
+// // Call the function to include header
+// includeHeader();
