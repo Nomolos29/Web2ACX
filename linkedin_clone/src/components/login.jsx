@@ -27,7 +27,8 @@ const Login = (props) => (
 );
 
 const Container = styled.div`
-    
+    height: 97vh;
+    overflow: hidden;
 `;
 
 const Nav = styled.nav`
@@ -76,18 +77,16 @@ const SignIn = styled.a`
 
 const Section = styled.section`
     display: flex;
-    min-height: 700px;
+    min-height: auto;
     max-width: 1128px;
     width: 100%;
-    padding: 70px 0 198px 0;
+    padding: 30px 0 198px 0;
     position: relative;
     flex-wrap: wrap;
     align-items: center;
-    align-content: start;
     margin: auto;
     @media (max-width: 768px) {
         margin: auto;
-        min-height: 0;
     }
 `;
 
@@ -97,10 +96,11 @@ const Hero = styled.div`
     height: 600px;
     align-items: center;
     @media ( max-width: 768px) {
+        height: 70vh;
         flex-direction: column;
         align-items: center;
-        gap: 25px;
-        height: auto;
+        justify-content: center;
+        gap: 65px;
     }
     h1 {
         width: 55%;
@@ -115,13 +115,16 @@ const Hero = styled.div`
             text-align: center;
             font-size: 36px;
             line-height: 3rem;
-            margin: 0;
+            margin: 0px;
         }
     }
     img {
         width: 55%;
+        height: 85vh;
+        margin-top: -50px;
         margin-right: -200px;
         @media (max-width: 768px) {
+            height: auto;
             margin: 0px;
             width: 85%;
         }
@@ -136,7 +139,6 @@ const Form = styled.div`
         display: flex;
         position: relative;
         justify-content: center;
-        margin-top: 30px;
     }
     img {
         height: 70%;
