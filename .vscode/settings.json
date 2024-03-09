@@ -1,3 +1,8 @@
 {
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5502,
+    "editor.fontFamily": "Cookie Regular, 'Courier New', monospace",
+    "editor.fontSize": 20,
+    "files.autoSave": "afterDelay",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorStyleInactive": "underline"
 }
