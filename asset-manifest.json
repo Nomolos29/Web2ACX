@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Web2ACX/linkedin_clone/static/css/main.fbd3311f.css",
+    "main.js": "/Web2ACX/linkedin_clone/static/js/main.5efc4943.js",
+    "index.html": "/Web2ACX/linkedin_clone/index.html",
+    "main.fbd3311f.css.map": "/Web2ACX/linkedin_clone/static/css/main.fbd3311f.css.map",
+    "main.5efc4943.js.map": "/Web2ACX/linkedin_clone/static/js/main.5efc4943.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbd3311f.css",
+    "static/js/main.5efc4943.js"
+  ]
+}
