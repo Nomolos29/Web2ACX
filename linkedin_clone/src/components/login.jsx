@@ -133,7 +133,7 @@ const Hero = styled.div`
 
 const Form = styled.div`
     position: absolute;
-    top: 50%;
+    top: 46%;
     width: 100%;
     @media (max-width: 768px) {
         display: flex;
